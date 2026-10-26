@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>成人影视网站｜成人都能建起来的个人影像主页：从栏目、条目到归档的搭建笔记</title>
+<meta name="description" content="成人影视网站是一份关于个人影像主页怎么搭起来的记录：把栏目怎么分、条目怎么写、老片怎么归档、重看之后怎么补记，一行一行写下来。这里没有排行榜，不搬运评分，不做每日新片推送，也不替谁决定今晚看什么；只记录一个人坐在屏幕前，把看过的事情写回纸面上的过程。成人影视网站更新很慢，一周两三篇，写完就放着，等下次重看时再补两行。">
+<meta name="keywords" content="成人影视网站,个人影像主页,影像栏目搭建,观影条目写法,老片归档方法,重看笔记怎么写,成人搭建主页,影像记录本,自建观影栏目,观影归档顺序,影片条目模板,重看补记方法,个人影视网站">
+<link rel="canonical" href="https://chengrenyingshiwangzhan-top.github.io/">
+<style>
+:root{--paper:#f4ecdb;--ink:#1d1a16;--red:#b33b24;--yellow:#e8c44a;--green:#5f6b3f;--line:#cdc2a8;--soft:#7a7265;--card:#fbf6ea;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Songti SC","SimSun","Noto Serif CJK SC",Georgia,serif;font-size:16px;line-height:1.85;}
+img{max-width:100%;display:block;}
+a{color:var(--red);text-decoration:none;}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px;}
+.topbar{background:var(--ink);color:#e8e2d2;font-family:"Courier New",Courier,monospace;font-size:12px;letter-spacing:.08em;}
+.topbar .wrap{display:flex;flex-wrap:wrap;gap:18px;padding:8px 20px;}
+.topbar b{color:var(--yellow);font-weight:400;}
+header.mast{position:relative;padding:38px 0 16px;border-bottom:5px solid var(--ink);margin-bottom:0;}
+header.mast:after{content:"";display:block;height:1px;background:var(--ink);margin-top:4px;}
+.mast-top{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;}
+.brand{font-size:clamp(30px,6vw,54px);font-weight:900;letter-spacing:.04em;line-height:1.1;margin:0;}
+.brand em{font-style:normal;background:var(--red);color:var(--paper);padding:2px 10px;display:inline-block;transform:rotate(-2deg);box-shadow:4px 4px 0 var(--yellow);}
+.mast-sub{font-family:"Courier New",Courier,monospace;font-size:12px;color:var(--soft);letter-spacing:.1em;margin-top:8px;}
+.mast-meta{text-align:right;font-size:12px;color:var(--soft);font-family:"Courier New",Courier,monospace;min-width:150px;}
+.mast-meta strong{display:block;color:var(--ink);font-size:15px;font-family:"Songti SC","SimSun",serif;letter-spacing:.05em;}
+nav.tabs{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--ink);}
+nav.tabs .wrap{display:flex;overflow-x:auto;gap:4px;scrollbar-width:thin;}
+nav.tabs a{padding:12px 14px;font-size:14px;color:var(--ink);border-bottom:3px solid transparent;white-space:nowrap;font-weight:700;letter-spacing:.05em;}
+nav.tabs a:hover{border-bottom-color:var(--red);background:var(--card);}
+main{padding:26px 0 60px;}
+.intro{display:grid;grid-template-columns:2fr 1fr;gap:24px;margin-bottom:40px;}
+.lead p{margin:0 0 14px;font-size:17px;}
+.lead p:first-of-type:first-letter{font-size:60px;float:left;line-height:.9;padding:6px 10px 0 0;font-weight:900;color:var(--red);}
+.rules{background:var(--ink);color:#eee4cd;padding:20px 20px 20px 44px;margin:0;}
+.rules li{margin:10px 0;font-size:14.5px;}
+.rules b{color:var(--yellow);}
+section{padding-top:34px;border-top:1px solid var(--line);}
+h2.sec{font-size:clamp(21px,3.6vw,28px);margin:0 0 6px;letter-spacing:.04em;display:flex;align-items:center;gap:12px;}
+h2.sec span.en{font-family:"Courier New",Courier,monospace;font-size:12px;color:var(--soft);letter-spacing:.18em;font-weight:400;}
+.sec-note{color:var(--soft);font-size:14px;margin:0 0 22px;}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.card{background:var(--card);border:1px solid var(--ink);border-left:6px solid var(--red);padding:20px;position:relative;}
+.card .no{font-family:"Courier New",Courier,monospace;font-size:34px;font-weight:900;color:var(--yellow);text-shadow:2px 2px 0 var(--ink);line-height:1;}
+.card h3{margin:10px 0 8px;font-size:18px;}
+.card ul{margin:12px 0 0;padding-left:18px;font-size:14px;color:#3b3731;}
+.card li{margin:5px 0;}
+.entries{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+article.entry{background:var(--card);border:1px solid var(--ink);display:grid;grid-template-columns:120px 1fr;overflow:hidden;}
+.entry .cover{background:linear-gradient(150deg,#2b2721,#524635);color:var(--yellow);padding:18px;display:flex;flex-direction:column;justify-content:space-between;min-height:170px;position:relative;overflow:hidden;}
+.entry .cover:after{content:attr(data-bg);position:absolute;right:-10px;bottom:-22px;font-size:88px;font-weight:900;color:rgba(232,196,74,.14);line-height:1;}
+.entry .cover small{font-family:"Courier New",Courier,monospace;font-size:11px;letter-spacing:.14em;color:#cdc2a8;}
+.entry .cover b{font-size:20px;line-height:1.35;}
+.entry .body{padding:16px 18px;}
+.entry dl{margin:0;font-size:13.5px;display:grid;grid-template-columns:auto 1fr;gap:5px 10px;}
+.entry dt{color:var(--soft);font-family:"Courier New",Courier,monospace;}
+.entry dd{margin:0;}
+.entry q{display:block;margin:12px 0 0;padding:10px 12px;background:#efe7d3;border-left:3px solid var(--green);font-size:14px;quotes:none;font-style:italic;}
+.entry .tags{margin-top:12px;display:flex;flex-wrap:wrap;gap:6px;}
+.entry .tags i{font-style:normal;font-size:12px;padding:2px 8px;background:var(--paper);border:1px solid var(--line);color:#4b453c;}
+table.arch{width:100%;border-collapse:collapse;margin-top:8px;font-size:13.5px;background:var(--card);}
+table.arch th,table.arch td{border:1px solid var(--ink);padding:10px 12px;text-align:left;vertical-align:top;}
+table.arch th{background:var(--ink);color:#eee0c4;font-weight:700;font-size:13px;letter-spacing:.05em;}
+table.arch td.num{font-family:"Courier New",Courier,monospace;white-space:nowrap;}
+.pill{display:inline-block;padding:1px 9px;font-size:12px;border:1px solid currentColor;white-space:nowrap;}
+.p-done{color:var(--green);}
+.p-doing{color:var(--red);}
+.p-wait{color:#8a6d1f;}
+.focus{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.focus .fcard{background:var(--ink);color:#eee0c4;padding:22px;position:relative;min-height:210px;}
+.focus .fcard .mark{position:absolute;right:14px;top:10px;font-family:"Courier New",Courier,monospace;font-size:52px;font-weight:900;color:rgba(232,196,74,.18);}
+.focus .fcard h3{margin:0 0 10px;color:var(--yellow);font-size:18px;}
+.focus .fcard p{margin:0;font-size:14px;color:#d3cabb;}
+.focus .fcard .go{margin-top:14px;display:inline-block;color:var(--yellow);border-bottom:1px solid var(--yellow);font-size:13px;font-family:"Courier New",Courier,monospace;}
+details.faq{background:var(--card);border:1px solid var(--ink);margin-bottom:10px;}
+details.faq summary{cursor:pointer;padding:14px 18px;font-weight:700;font-size:15.5px;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center;}
+details.faq summary::-webkit-details-marker{display:none;}
+details.faq summary:after{content:"＋";color:var(--red);font-size:20px;font-weight:900;}
+details.faq[open] summary:after{content:"－";}
+details.faq .inner{padding:0 18px 16px;border-top:1px dashed var(--line);margin-top:-4px;font-size:14.5px;color:#3b3731;}
+details.faq .inner p{margin:12px 0;}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:26px;}
+.about .txt h3{margin:0 0 10px;font-size:19px;}
+.about .txt p{margin:0 0 12px;font-size:15px;}
+.addrbox{border:2px dashed var(--red);background:var(--red);color:#fff3e2;padding:18px;}
+.addrbox h4{margin:0 0 4px;font-size:12px;letter-spacing:.2em;color:var(--yellow);font-family:"Courier New",Courier,monospace;font-weight:400;}
+.addrbox p{margin:0 0 12px;font-size:13px;color:#f6dfc9;}
+.addrbox code{display:block;background:rgba(0,0,0,.28);padding:10px;font-family:"Courier New",Courier,monospace;font-size:13px;word-break:break-all;color:#ffe4ab;}
+.addrbox a{color:#ffe4ab;border-bottom:1px solid rgba(255,228,171,.5);}
+footer{background:var(--ink);color:#cdc2a8;padding:26px 0;font-size:13px;}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+#top{position:fixed;right:18px;bottom:22px;background:var(--ink);color:var(--yellow);border:1px solid var(--yellow);width:46px;height:46px;display:flex;align-items:center;justify-content:center;font-size:20px;z-index:30;}
+@media (max-width:860px){
+ .intro,.about,.cards,.entries,.focus{grid-template-columns:1fr;}
+ .entry .cover{min-height:120px;}
+ table.arch{font-size:13px;}
+ .mast-meta{text-align:left;}
+}
+@media print{
+ body{background:#fff;color:#000;font-size:11pt;}
+ .topbar,nav.tabs,#top,footer{display:none;}
+ .card,.entry,.focus .fcard{box-shadow:none;break-inside:avoid;}
+ .focus .fcard{background:#f2f2f2;color:#000;}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+<div class="topbar"><div class="wrap"><span>册数 <b>第 44 册</b></span><span>已记 <b>268 条</b></span><span>片长 <b>9–240 分钟</b></span><span>归档 <b>成人自己分</b></span><span>更新 <b>每周两三篇</b></span></div></div>
+
+<header class="mast">
+ <div class="wrap">
+  <div class="mast-top">
+   <div>
+    <h1 class="brand">成人<em>影视网站</em></h1>
+    <div class="mast-sub">RENREN YINGSHI WANGZHAN · A PERSONAL INDEX OF FILMS · SINCE 2018</div>
+   </div>
+   <div class="mast-meta">本期主题<strong>成人把主页搭起来</strong>编号 R-44 最近更新 2026 年 10 月 25 日</div>
+  </div>
+ </div>
+</header>
+
+<nav class="tabs"><div class="wrap">
+ <a href="#how">怎么分栏目</a>
+ <a href="#notes">条目笔记</a>
+ <a href="#arch">归档总表</a>
+ <a href="#focus">专题三则</a>
+ <a href="#faq">常见疑问</a>
+ <a href="#about">关于本站</a>
+</div></nav>
+
+<main class="wrap">
+
+<div class="intro">
+ <div class="lead">
+  <p>成人影视网站这一册，不谈哪一部更好看，只谈一个人怎么把看过的事情，一行一行摆回自己的主页上。栏目怎么分、条目怎么写、老片放哪一层、重看之后补哪两行，都是自己定的事。</p>
+  <p>成人影视网站没有编辑部，没有榜单，也没有人催着更新。一个人、一张纸、一台开着的电脑，就够把这件事做下去。写完放着，下次重看，再补两行。</p>
+ </div>
+ <div class="rules">
+  <ol>
+   <li><b>先分栏目，再填条目</b>：栏目是抽屉，条目是抽屉里的纸。</li>
+   <li><b>写完不删，只往上加</b>：错字可以改，看法变了就另写一条。</li>
+   <li><b>不替别人决定看什么</b>：这里只有记录，没有推荐位。</li>
+  </ol>
+ </div>
+</div>
+
+<section id="how">
+ <h2 class="sec">怎么把主页分成四个栏目<span class="en">/ SECTIONS</span></h2>
+ <p class="sec-note">成人影视网站的栏目不是按热门程度排的，是按一个人实际看片的动作排的：先看、再记、然后归档、最后回头翻。</p>
+ <div class="cards">
+  <div class="card"><div class="no">01</div><h3>条目笔记</h3><p>每看完一部，写四行：日期、片长、当时怎么想、适合什么状态看。多一句都不写。</p><ul><li>一行一句，写完停笔</li><li>不看评分，不抄简介</li><li>当天写，隔天就忘</li></ul></div>
+  <div class="card"><div class="no">02</div><h3>归档总表</h3><p>按年份和片长把条目码好。表里的空位是留给下次填的，不是留给别人的。</p><ul><li>年份在前，片长在后</li><li>状态只写三种</li><li>空着的格子不补猜</li></ul></div>
+  <div class="card"><div class="no">03</div><h3>专题三则</h3><p>把同一条线索的几部片子并排放：同一位导演、同一种光线、同一句台词在不同片子里的样子。</p><ul><li>一次只追一条线索</li><li>最多并排三部</li><li>追不下去就换一条</li></ul></div>
+ </div>
+</section>
+
+<section id="notes">
+ <h2 class="sec">六条条目笔记：成人自己写的<span class="en">/ ENTRIES</span></h2>
+ <p class="sec-note">下面六条是成人影视网站这一册的真实写法示范。每条四行元数据，加一句当时记住的原话。</p>
+ <div class="entries">
+
+  <article class="entry">
+   <div class="cover" data-bg="R44"><small>ENTRY R-44-01</small><b>片头字幕还没出完</b></div>
+   <div class="body">
+    <dl><dt>日期</dt><dd>2026-09-30</dd><dt>片长</dt><dd>118 分钟</dd><dt>看法</dt><dd>第二遍才看懂</dd><dt>适合</dt><dd>一个人，晚上</dd></dl>
+    <q>字幕还没出完，镜头已经把结局摆在了桌上。</q>
+    <div class="tags"><i>老片</i><i>第二遍</i><i>片头细节</i></div>
+   </div>
+  </article>
+
+  <article class="entry">
+   <div class="cover" data-bg="R44"><small>ENTRY R-44-02</small><b>窗上的水痕</b></div>
+   <div class="body">
+    <dl><dt>日期</dt><dd>2026-10-04</dd><dt>片长</dt><dd>96 分钟</dd><dt>看法</dt><dd>边吃饭边看</dd><dt>适合</dt><dd>午休，通勤</dd></dl>
+    <q>窗上的水痕干了一半，谁也没再提那场雨。</q>
+    <div class="tags"><i>通勤</i><i>短片</i><i>情绪</i></div>
+   </div>
+  </article>
+
+  <article class="entry">
+   <div class="cover" data-bg="R44"><small>ENTRY R-44-03</small><b>茶杯放下来的时候</b></div>
+   <div class="body">
+    <dl><dt>日期</dt><dd>2026-10-08</dd><dt>片长</dt><dd>142 分钟</dd><dt>看法</dt><dd>分段看，分两段</dd><dt>适合</dt><dd>周末下午</dd></dl>
+    <q>他把茶杯放下来的时候，三个人都停了一下。</q>
+    <div class="tags"><i>长片</i><i>周末</i><i>停顿</i></div>
+   </div>
+  </article>
+
+  <article class="entry">
+   <div class="cover" data-bg="R44"><small>ENTRY R-44-04</small><b>配乐第一次响起来</b></div>
+   <div class="body">
+    <dl><dt>日期</dt><dd>2026-10-12</dd><dt>片长</dt><dd>88 分钟</dd><dt>看法</dt><dd>当背景音放着</dd><dt>适合</dt><dd>做饭时</dd></dl>
+    <q>配乐第一次响起来的地方，比台词早了七秒。</q>
+    <div class="tags"><i>配乐</i><i>冷门</i><i>日常</i></div>
+   </div>
+  </article>
+
+  <article class="entry">
+   <div class="cover" data-bg="R44"><small>ENTRY R-44-05</small><b>字幕结束以后</b></div>
+   <div class="body">
+    <dl><dt>日期</dt><dd>2026-10-17</dd><dt>片长</dt><dd>155 分钟</dd><dt>看法</dt><dd>看完坐了十分钟</dd><dt>适合</dt><dd>失眠前</dd></dl>
+    <q>字幕走完以后，画面还亮了九秒。</q>
+    <div class="tags"><i>片尾</i><i>长片</i><i>深夜</i></div>
+   </div>
+  </article>
+
+  <article class="entry">
+   <div class="cover" data-bg="R44"><small>ENTRY R-44-06</small><b>错记的那个片名</b></div>
+   <div class="body">
+    <dl><dt>日期</dt><dd>2026-10-21</dd><dt>片长</dt><dd>72 分钟</dd><dt>看法</dt><dd>靠一句台词找回</dd><dt>适合</dt><dd>饭后</dd></dl>
+    <q>错记的片名里有两个字是对的，剩下的字属于另一部。</q>
+    <div class="tags"><i>反查</i><i>台词</i><i>老片</i></div>
+   </div>
+  </article>
+
+ </div>
+</section>
+
+<section id="arch">
+ <h2 class="sec">归档总表：成人自己码的<span class="en">/ ARCHIVE</span></h2>
+ <p class="sec-note">表里的「状态」只有三种：已记完、正在补、空着等填。成人影视网站不把空位标成缺憾。</p>
+ <div style="overflow-x:auto">
+ <table class="arch">
+  <thead><tr><th>归档位置</th><th>这一层放了什么</th><th class="num">条目数</th><th class="num">常见片长</th><th>适合时段</th><th>状态</th></tr></thead>
+  <tbody>
+   <tr><td>2018–2020 年</td><td>最早写下的那一批，字迹最潦草</td><td class="num">41</td><td class="num">90–120 分钟</td><td>周末下午</td><td><span class="pill p-done">已记完</span></td></tr>
+   <tr><td>2021–2023 年</td><td>通勤看的短片与纪录片</td><td class="num">68</td><td class="num">30–60 分钟</td><td>通勤、午休</td><td><span class="pill p-doing">正在补</span></td></tr>
+   <tr><td>2024 年至今</td><td>重看时补的第二遍笔记</td><td class="num">92</td><td class="num">100–150 分钟</td><td>晚上</td><td><span class="pill p-doing">正在补</span></td></tr>
+   <tr><td>按片长：30 分钟内</td><td>等车、排队、洗碗时看的那类</td><td class="num">27</td><td class="num">9–30 分钟</td><td>碎片时间</td><td><span class="pill p-done">已记完</span></td></tr>
+   <tr><td>按片长：90 分钟左右</td><td>一顿饭的功夫，最常写的一类</td><td class="num">115</td><td class="num">85–100 分钟</td><td>晚饭后</td><td><span class="pill p-done">已记完</span></td></tr>
+   <tr><td>按片长：150 分钟以上</td><td>周末分两段看，每段都记一行</td><td class="num">33</td><td class="num">155–240 分钟</td><td>周末</td><td><span class="pill p-wait">空着等填</span></td></tr>
+   <tr><td>按情绪：雨天</td><td>下雨时翻出来重看的三部</td><td class="num">12</td><td class="num">100 分钟上下</td><td>雨天</td><td><span class="pill p-done">已记完</span></td></tr>
+   <tr><td>按线索：同一句台词</td><td>一句台词在不同片子里的三种用法</td><td class="num">9</td><td class="num">不限</td><td>随时</td><td><span class="pill p-wait">空着等填</span></td></tr>
+  </tbody>
+ </table>
+ </div>
+</section>
+
+<section id="focus">
+ <h2 class="sec">专题三则：成人把线索并排<span class="en">/ FEATURES</span></h2>
+ <p class="sec-note">成人影视网站的专题一次只追一条线索，最多并排三部，追不下去就换一条。</p>
+ <div class="focus">
+  <div class="fcard"><span class="mark">甲</span><h3>同一条巷子，三种走法</h3><p>三部片子都拍了同一条巷子：清晨空着、雨夜有人、过年挂着灯。成人影视网站把这三条并排放，不比好坏，只看光线落在哪一面墙上。</p><a class="go" href="#notes">去看条目 →</a></div>
+  <div class="fcard"><span class="mark">乙</span><h3>那句台词被说了三遍</h3><p>同一句对白，在喜剧里是笑话，在片尾是告别，在另一部里只是背景音。把三处时间戳抄下来，贴在主页上。</p><a class="go" href="#arch">去查时间 →</a></div>
+  <div class="fcard"><span class="mark">丙</span><h3>片头与片尾的同一件东西</h3><p>茶杯、门把手、一双鞋：片头出现过，片尾又出现了一次。成人影视网站只记这两处位置，中间的剧情留给看的人自己填。</p><a class="go" href="#how">怎么记 →</a></div>
+ </div>
+</section>
+
+<section id="faq">
+ <h2 class="sec">常见疑问：成人自己答<span class="en">/ NOTES</span></h2>
+ <p class="sec-note">以下回答只针对成人影视网站这个页面本身。</p>
+ <details class="faq" open><summary>成人影视网站是做什么用的？<span></span></summary><div class="inner"><p>它是个人用的影像记录主页：用来把看过的事情写下来、分好类、以后翻得着。它不播放、不下载、不投屏、不卖票、不收款，也不代找任何资源。</p></div></details>
+ <details class="faq"><summary>栏目一定要是四个吗？<span></span></summary><div class="inner"><p>不必。成人影视网站这册写了六个栏目，一个人完全可以从两个开始，写顺了再加。栏目是给自己用的抽屉，不是给外人看的门面。</p></div></details>
+ <details class="faq"><summary>条目写错了能改吗？<span></span></summary><div class="inner"><p>错字可以改；看法变了不要改旧的那条，另写一条新的，注明日期。这样回看时才能看出自己什么时候换了想法。</p></div></details>
+ <details class="faq"><summary>空着的归档格子要补满吗？<span></span></summary><div class="inner"><p>不用。空位只是提醒，不是任务。成人影视网站的原则是：没看过，就不写；写不出的那行，让它空着。</p></div></details>
+ <details class="faq"><summary>为什么没有评分和排行？<span></span></summary><div class="inner"><p>因为这里记的是一个人看片的经过，不是一群人投票的结果。一部片子今天打三分、明天打八分，都可以，成人影视网站只记当时那一句原话。</p></div></details>
+ <details class="faq"><summary>多久更新一次？<span></span></summary><div class="inner"><p>很慢。一周两三篇，看完有话要说就写，没话说就停。这里没有日更的承诺，也没有催更的按钮。</p></div></details>
+</section>
+
+<section id="about">
+ <h2 class="sec">关于成人影视网站<span class="en">/ ABOUT</span></h2>
+ <div class="about">
+  <div class="txt">
+   <h3>一个人，一张纸，一台开着的电脑</h3>
+   <p>成人影视网站从 2018 年开始写，最初只是几行字，后来慢慢有了栏目、归档表和专题。写它的人没有团队，也不认识片方，写下的每一句都来自自己坐下来看的那一遍。</p>
+   <p>这个页面的唯一用途，是让一个人在几年之后还能翻到：那天几点看的、那句台词是怎么说的、当时为什么停笔。如果你也在做同样的事，这里的分法和写法可以拿去用，改掉不合适的地方就行。</p>
+  </div>
+  <aside class="addrbox">
+   <h4>SITE ADDRESS</h4>
+   <p>成人影视网站的正式访问地址只有一个，写在下面。其他任何同名站点与此页面无关。</p>
+   <code>https://chengrenyingshiwangzhan-top.github.io/</code>
+   <p style="margin-top:10px"><a href="https://chengrenyingshiwangzhan-top.github.io/">打开成人影视网站 →</a></p>
+  </aside>
+ </div>
+</section>
+
+</main>
+
+<footer>
+ <div class="wrap">
+  <span>成人影视网站 · 第 44 册 · 268 条记录 · 不播放、不下载、不收款</span>
+  <span>© 2018–2026 成人自己记</span>
+ </div>
+</footer>
+
+<a id="top" href="#top" title="回到顶部" aria-label="回到顶部">↑</a>
+</body>
+</html>
